@@ -1,0 +1,20 @@
+ALGORITHM algorithm_lecturephrase
+VAR
+   Nbmot, Nbvoyelles, NbCaractere : INTEGER : 0
+   PHRASE : STRING
+BEGIN
+FOR i = 0 , i< PHRASE.LENGHT, i++ DO
+    IF (PHRASE[i]= " " or PHRASE[i]= ".") THEN
+    Nbmot= Nbmot + 1
+    END_IF
+FOR i = 0 , i< PHRASE.LENGHT, i++ DO
+    IF (PHRASE[i]= "a"  or PHRASE[i]= "e" or PHRASE[i]= "i" or PHRASE[i]= "o" or PHRASE[i]= "u" or PHRASE[i]= "y") THEN
+        Nbvoyelles= Nbvoyelles + 1
+    END_IF
+    
+END_FOR
+    NbCaractere = PHRASE.LENGHT
+    READ("nombre de mot", Nbmot)
+    READ("nombre de voyelle", Nbvoyelles)
+    READ("nombre de caractere", NbCaractere)
+END
